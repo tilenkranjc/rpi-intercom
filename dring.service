@@ -1,0 +1,14 @@
+[Unit]
+Description=Ring daemon
+After=network.target
+
+[Service]
+ExecStart=/home/pi/ring-daemon/bin/restdring
+WorkingDirectory=/home/pi/ring-daemon/bin
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
